@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no,email=no" name="format-detection"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>新房</title>
+    <link href="../css/base.css" rel="stylesheet"/>
+    <link href="../css/common.css" rel="stylesheet"/>
+    <link href="../css/newhouse.css" rel="stylesheet"/>
+    <script src="../js/vue.js"></script>
+    <script src="../js/zepto.js"></script>
+
+
+    <style>
+        .on{color:red;}
+        [v-cloak]{
+            display:none
+        }
+    </style>
+
+    <script>
+        (function(){
+            function initFontSize(){
+                document.documentElement.style.fontSize=20*document.documentElement.clientWidth/375+'px';
+            }
+            initFontSize();
+            window.addEventListener('resize',initFontSize,false);
+        })();
+        window.onload=function(){
+            var oS1=$('#show-1');
+            var oS2=$('#show-2');
+            var oS3=$('#show-3');
+            var oS4=$('#show-4');
+            var aRed=$('.red');
+            var c=0;
+            var n=0;
+            var p=0;
+            var m=0;
+            var vm=new Vue({
+                el:'#box',
+                data:{
+                    arr:['光明峰荟','璞岸花园','鹏大厦','远洋新天地家园','星河智荟花园','天涛轩','恒裕嘉城','花语馨花园','德润荣君府','益田米兰公馆','清凤荣盛创投大厦','幸福城商业大厦'],
+                    arr1:['南环大道和振兴路交互处','广东省深圳市盐田区大鹏镇大鹏','深圳市罗湖区文锦北路1118号','龙翔大道东（天成学校旁）','龙岗地铁3号线永湖站A2出口','位于深圳盐田区大梅沙盐梅路以北盐...','龙岗爱南路和同富龙交汇处','布吉街道布李路97号','广东省深圳市龙岗区布龙路与坂雪岗交互','光明新区公明办事处松柏路东侧和公常路...','八卦三路88号荣生大厦','龙华区和平平路与清泉路交汇处'],
+                    arr2:['25000元/㎡','45000元/㎡','78000元/㎡','39000元/㎡','36000元/㎡','103872元/㎡','33000元/㎡','38000元/㎡','45000元/㎡','38000元/㎡','46000元/㎡','51000元/㎡'],
+                    arr3:['../images/z-113c45d8ac-f8d6-4ed3-ae7b-73344ec0c55f.jpg','../images/z-2387a598e-a836-45bc-8d95-1eb3b3b6a1e2.jpg','../images/z-36c86aab0-4c0a-49e8-8213-5b92e282c031.jpg','../images/z-477a47193-58c1-4c75-9f89-fdddd8c08d14.jpg','../images/z-57f20a494-573d-4903-9dc2-7aeedaadb441.jpg','../images/z-64958d4be-cd1f-4b69-8295-7b8d59cd2b3a.jpg','../images/z-7262a0b9b-6214-486e-981a-366d794e1c68.JPG','../images/z-8c506a40b-9437-4733-9b1c-dab27fa3656a.jpg','../images/z-93fbaa6b2-ce51-41af-bc45-1943fc77a800.JPG','../images/z-102e56bfb1-19cc-45fa-bcc9-db8cc73ad446.png','../images/z-113c45d8ac-f8d6-4ed3-ae7b-73344ec0c55f.jpg','../images/z-128dd47c38-43c3-4d6a-9183-7ac9a2154309.jpg'],
+
+                    msg:'免费看房',
+                    msg1:'加载失败'
+
+                },
+                methods:{
+                    show1:function(){
+                        if(n%2==0){
+                            oS2.hide();
+                            oS3.hide();
+                            oS4.hide();
+                            oS1.show();
+                            aRed.removeClass('on');
+                            aRed.eq(0).addClass('on');
+                        }else{
+                            oS1.hide();
+                            aRed.eq(0).removeClass('on');
+                        }
+                        n++;
+                        c=0;
+                        p=0;
+                        m=0;
+
+                    },
+                    show2:function(){
+                        if(m%2==0){
+                            oS1.hide();
+                            oS3.hide();
+                            oS4.hide();
+                            oS2.show();
+                            aRed.removeClass('on');
+                            aRed.eq(1).addClass('on');
+                        }else{
+                            oS2.hide();
+                            aRed.eq(1).removeClass('on');
+                        }
+                      m++;
+                        c=0;
+                        p=0;
+                        n=0;
+                    },
+                    show3:function(){
+                        if(c%2==0){
+                            oS1.hide();
+                            oS2.hide();
+                            oS4.hide();
+                            oS3.show();
+                            aRed.removeClass('on');
+                            aRed.eq(2).addClass('on');
+                        }else{
+                            oS3.hide();
+                            aRed.eq(2).removeClass('on');
+                        }
+                       c++;
+                        m=0;
+                        p=0;
+                        n=0;
+                    },
+                    show4:function(){
+                        if(p%2==0){
+                            oS1.hide();
+                            oS2.hide();
+                            oS3.hide();
+                            oS4.show();
+                            aRed.removeClass('on');
+                            aRed.eq(3).addClass('on');
+                        }else{
+                            oS4.hide();
+                            aRed.eq(3).removeClass('on');
+                        }
+                        p++;
+                        c=0;
+                        n=0;
+                        m=0;
+                    }
+                }
+            });
+        };
+    </script>
+</head>
+<body  id="box">
+    <header>
+        <div class="box">
+            <div class="clearfix ul">
+                <img class="topleft fl" src="../images/z-topleft.png" alt="加载失败"
+                     onclick="window.location.href='../index.html'"/>
+                <input type="text" class="fl in" name="" value=" 请输入校区或地址"/>
+                <img  class="rsearch fl" src="../images/z-jjrsearch.png" alt="加载失败"/>
+            </div>
+            <ul class="clearfix ul aa" >
+                <li class="fl " @click="show1()"  >
+                    <p class="red">区域</p>
+                    <div class="icon-1"></div>
+                </li>
+                <li  class="fl " @click="show2()" >
+                    <p  class="red">均价</p>
+                    <div class="icon-1"></div>
+                </li>
+                <li  class="fl " @click="show3()">
+                    <p  class="red">户型</p>
+                    <div class="icon-1"></div>
+                </li>
+                <li  class="fl " @click="show4()" >
+                    <p  class="red">更多</p>
+                    <div class="icon-1"></div>
+                </li>
+            </ul>
+            <p class="p1">共有108个楼盘信息</p>
+        </div>
+    </header>
+    <section>
+        <ul v-cloak>
+            <li class="list-1 clearfix ul" v-for="(i,v) in arr"
+                onclick="window.location.href='newhouse-child.html'">
+                <img class="fl" :src="arr3[i]" :alt="msg1" >
+                <div class="fl ms">
+                   <p class="ms-1">{{v}}</p>
+                   <p class="ms-2"> &nbsp&nbsp&nbsp&nbsp{{arr1[i]}}</p>
+                   <p class="ms-3">{{arr2[i]}}</p>
+                   <div class="ms-4">{{msg}}</div>
+                </div>
+            </li>
+        </ul>
+        <!--区域-->
+        <ul class="fix-1" id="show-1">
+            <li class="none">
+                <p>不限</p>
+            </li>
+            <li class=" region"><p>福田</p></li>
+            <li class=" region" ><p>罗湖</p></li>
+            <li class=" region" ><p>南山</p></li>
+            <li class=" region" ><p>盐田</p></li>
+            <li class=" region"><p>宝安</p></li>
+        </ul>
+        <!--均价-->
+        <ul class="fix-1" id="show-2" >
+            <li class="none">
+                <p>不限</p>
+            </li>
+            <li class=" region"><p>1万以下</p></li>
+            <li class=" region" ><p>1-1.5万</p></li>
+            <li class=" region" ><p>1.5-2万</p></li>
+            <li class=" region" ><p>2-3万</p></li>
+            <li class=" region"><p>3万以上</p></li>
+        </ul>
+        <!--户型-->
+        <ul class="fix-1" id="show-3" >
+            <li class="none">
+                <p>不限</p>
+            </li>
+            <li class=" region"><p>一房</p></li>
+            <li class=" region" ><p>二房</p></li>
+            <li class=" region" ><p>三房</p></li>
+            <li class=" region" ><p>四房</p></li>
+            <li class=" region"><p>五房</p></li>
+        </ul>
+        <!--更多-->
+        <ul class="fix-1" id="show-4" >
+            <li class="none">
+                <p>综合排序</p>
+            </li>
+            <li class=" region"><p>均价由高到底</p></li>
+            <li class=" region" ><p>均价由低到高</p></li>
+            <li class=" region" ><p>开盘时间倒叙</p></li>
+            <li class=" region" ><p>开盘时间顺序</p></li>
+            <li class=" region"><p>入住时间倒叙</p></li>
+        </ul>
+
+    </section>
+    <footer>
+        <p>{{1}}/9</p>
+    </footer>
+</body>
+</html>

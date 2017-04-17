@@ -1,0 +1,138 @@
+html {
+  font-size: 20px; }
+
+.head {
+  width: 18.75rem;
+  height: 2.15rem;
+  background: #fff; }
+  .head .head-1 {
+    z-index: 100;
+    width: 18.75rem;
+    height: 2.15rem;
+    background: #f8f8f8;
+    line-height: 2.15rem;
+    position: fixed; }
+    .head .head-1 .a-1 {
+      margin-left: 0.5rem; }
+      .head .head-1 .a-1 img {
+        width: 0.6rem;
+        height: 0.9rem;
+        margin-top: 0.7rem; }
+    .head .head-1 h2 {
+      text-align: center;
+      font-size: 0.9rem;
+      font-weight: bold; }
+
+.content {
+  width: 100%; }
+  .content .c {
+    border-top: 0.05rem solid #d8d8d8; }
+    .content .c .con-1 {
+      width: 18.75rem;
+      height: 3rem;
+      display: block;
+      padding: 0.65rem; }
+      .content .c .con-1 .con-1-1 {
+        width: 13.25rem;
+        margin-right: 0.5rem;
+        position: relative; }
+        .content .c .con-1 .con-1-1 .con-p {
+          font-size: 0.6rem;
+          color: #666;
+          margin-top: 0.4rem;
+          line-height: 1rem;
+          padding-bottom: 1rem;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis; }
+        .content .c .con-1 .con-1-1 .con-s {
+          font-size: 0.6rem;
+          color: #666;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          margin-top: 10px; }
+        .content .c .con-1 .con-1-1 h3 {
+          font-size: 0.7rem;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis; }
+    .content .c img {
+      width: 4rem;
+      height: 3rem; }
+
+footer {
+  width: 18.75rem;
+  height: 2.5rem;
+  background: #e8e8e8;
+  text-align: center;
+  line-height: 2.5rem; }
+  footer a {
+    font-size: 0.6rem;
+    color: #333; }
+
+/*-------------------------------------Real estate information--------------------------------*/
+header {
+  width: 18.75rem;
+  height: 2.15rem; }
+  header .head-1 {
+    width: 18.75rem;
+    height: 2.15rem;
+    background: #f8f8f8;
+    line-height: 2.15rem; }
+    header .head-1 .a-1 {
+      margin-left: 0.5rem; }
+      header .head-1 .a-1 img {
+        width: 0.6rem;
+        height: 0.9rem;
+        margin-top: 0.7rem; }
+    header .head-1 h2 {
+      text-align: center;
+      font-size: 0.9rem;
+      font-weight: bold; }
+
+.r-content {
+  width: 17.75rem;
+  border-top: 0.05rem solid #d8d8d8;
+  padding: 0.5rem; }
+  .r-content h2 {
+    font-size: 0.8rem;
+    font-weight: bold;
+    line-height: 1.4rem; }
+  .r-content .p {
+    font-size: 0.6rem;
+    color: #999;
+    border-bottom: 0.05rem dashed #d8d8d8;
+    padding: 10px 0; }
+  .r-content .r-c-1 {
+    padding: 0.25rem; }
+    .r-content .r-c-1 p {
+      line-height: 1.4rem;
+      font-size: 0.8rem; }
+    .r-content .r-c-1 h3 {
+      font-size: 0.8rem;
+      font-weight: bold;
+      line-height: 1.4rem; }
+    .r-content .r-c-1 .r-c-i {
+      width: 17.25rem;
+      height: 12.95rem; }
+    .r-content .r-c-1 .r-c-i2 {
+      width: 17.25rem;
+      height: 34.8rem; }
+  .r-content .r-c-2 {
+    padding: 0.25rem; }
+    .r-content .r-c-2 p {
+      line-height: 1.4rem;
+      font-size: 0.8rem;
+      text-indent: 2em; }
+  .r-content .r-c-3 {
+    padding: 0.25rem; }
+    .r-content .r-c-3 p {
+      line-height: 1.4rem;
+      font-size: 0.8rem;
+      text-indent: 2em; }
+    .r-content .r-c-3 h3 {
+      text-indent: 2em;
+      font-size: 0.8rem;
+      font-weight: bold;
+      line-height: 1.4rem; }

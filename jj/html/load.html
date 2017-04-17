@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0/no">
+    <meta content="telephone=no,email=no" name="format-detection"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>登录</title>
+    <link href="../css/base.css" rel="stylesheet" />
+    <link href="../css/common.css" rel="stylesheet" />
+    <link href="../css/load.css" rel="stylesheet" />
+    <script>
+        (function(){
+            function initFontSize(){
+                document.documentElement.style.fontSize=20*document.documentElement.clientWidth/375+'px';
+            }
+            initFontSize();
+            window.addEventListener('resize',initFontSize,false);
+        })();
+    </script>
+    <script src="../js/load.js"></script>
+</head>
+<body>
+    <header>
+        <a href="../index.html"><</a>
+        <span>登录</span>
+    </header>
+    <section>
+        <!--<ul class="sec1">
+            <li class="sli"><a href="javascript:;">普通登录</a></li>
+            <li><a href="javascript:;">验证码登录</a></li>
+        </ul>-->
+        <ul class="sec2">
+            <li>
+               <span>账号</span>
+                <input type="text" name="" value="请输入手机号码(例177-7777-7777)" />
+            </li>
+            <li>
+                <span>密码</span>
+                <input type="password" name="" value="" placeholder="请输入密码(6-12位数字、字母皆可)"/>
+            </li>
+        </ul>
+    </section>
+    <footer>
+        <a href="personal.html" class="fot1">登录</a>
+        <a href="register.html" class="fot2">立即注册</a>
+        <a href="password.html" class="fot3">忘记密码？</a>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,59 @@
+html{
+  font-size:20px;
+}
+@function px2rem($px) {
+  @return $px / 20px * 1rem;
+}
+/*
+width:px2rem(20px);*/
+
+header{
+  height: px2rem(44px);
+  width:100%;
+  line-height:px2rem(44px);
+  background: #df3031;
+  a{
+    color:#fff;
+    font-size:px2rem(16px);
+    margin-left:px2rem(14px) ;
+  }
+  span{
+    color:#fff;
+    font-size:px2rem(18px);
+    margin-left:px2rem(110px) ;
+  }
+}
+section{
+  width:100%;
+  height: px2rem(624px);
+  background: #f5f5f5;
+  padding-left:px2rem(10px);
+  h2{
+    line-height:px2rem(44px);
+    height:px2rem(44px);
+    font-size:px2rem(14px);
+    color:#999;
+    width:100%;
+  }
+  input{
+    width:px2rem(354px);
+    height: px2rem(44px);
+    text-align: center;
+    border:px2rem(1px) solid #d8d8d8;
+    background: #fff;
+    border-radius:px2rem(6px);
+  }
+  a{
+    width:px2rem(356px);
+    height: px2rem(44px);
+    line-height:px2rem(44px);
+    text-align: center;
+    font-size:px2rem(16px);
+    color:#fff;
+    border-left:px2rem(1px) solid #a99b9a;
+    border-right:px2rem(1px) solid #a99b9a;
+    background: url(../images/q1.jpg) repeat-x;
+    display:block;
+    margin-top:px2rem(20px);
+  }
+}

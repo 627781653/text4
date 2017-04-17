@@ -1,0 +1,461 @@
+html, body {
+  font-size: 20px; }
+
+header {
+  width: 18.75rem;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100; }
+  header h2 {
+    width: 100%;
+    height: 2.2rem;
+    background: #df3031;
+    font-size: 0.8rem;
+    color: #fff;
+    text-align: center;
+    line-height: 2.2rem; }
+  header a {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.3rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    background: url("../images/Z_nav_back.png") no-repeat left;
+    background-size: 100%; }
+
+section {
+  width: 18.75rem;
+  margin-top: 2.2rem;
+  overflow: hidden; }
+  section .tab {
+    width: 281.25rem;
+    transform: translateX(-18.75rem); }
+    section .tab li {
+      width: 18.75rem;
+      height: 14.05rem;
+      float: left; }
+      section .tab li img {
+        width: 100%;
+        height: 100%; }
+  section .introduce {
+    padding: 0.75rem 0.75rem 0.4rem 0.75rem; }
+    section .introduce .introduce_T {
+      width: 100%;
+      position: relative; }
+      section .introduce .introduce_T h4 {
+        margin-right: 2.25rem;
+        font-size: 0.8rem;
+        font-weight: bold; }
+      section .introduce .introduce_T p {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 2.1rem;
+        line-height: 100%;
+        text-align: center;
+        border-left: 0.15rem solid #d6d6d6; }
+        section .introduce .introduce_T p img {
+          width: 0.8rem;
+          height: 0.8rem;
+          display: block;
+          margin: 0 auto 0.1rem; }
+        section .introduce .introduce_T p span {
+          line-height: 100%;
+          display: inline-block;
+          font-size: 0.6rem; }
+    section .introduce .introduce_C {
+      width: 100%;
+      margin-bottom: 0.25rem; }
+      section .introduce .introduce_C span {
+        font-size: 1.2rem;
+        color: #df3031; }
+      section .introduce .introduce_C i {
+        font-size: 0.65rem;
+        color: #df3031; }
+    section .introduce .introduce_B {
+      width: 100%; }
+      section .introduce .introduce_B li {
+        float: left;
+        font-size: 0.6rem;
+        padding: 0.1rem;
+        margin-right: 0.3rem;
+        margin-bottom: 0.7rem;
+        border-radius: 0.15rem; }
+      section .introduce .introduce_B li:nth-child(1) {
+        border: 0.05rem solid #e93140;
+        color: #e93140; }
+      section .introduce .introduce_B li:nth-child(2) {
+        border: 0.05rem solid #4baeee;
+        color: #4baeee; }
+      section .introduce .introduce_B li:nth-child(3) {
+        border: 0.05rem solid #7ed321;
+        color: #7ed321; }
+      section .introduce .introduce_B li:nth-child(4) {
+        border: 0.05rem solid #f5a623;
+        color: #f5a623; }
+      section .introduce .introduce_B li:nth-child(5) {
+        border: 0.05rem solid #df3031;
+        color: #df3031; }
+
+.interval {
+  width: 18.75rem;
+  height: 0.5rem;
+  background: #f5f5f9;
+  border-top: 0.05rem solid #e7e7e7;
+  border-bottom: 0.05rem solid #e7e7e7; }
+
+article {
+  width: 18.75rem; }
+  article .ate_housing ol {
+    width: 18.75rem;
+    padding: 0.6rem 0 0.5rem;
+    border-bottom: 0.05rem solid #e7e7e7;
+    display: -webkit-box; }
+    article .ate_housing ol li:nth-child(1) {
+      border-left: 0.05rem solid white; }
+    article .ate_housing ol li {
+      height: 2rem;
+      -webkit-box-flex: 1;
+      border-left: 0.05rem solid #e7e7e7; }
+      article .ate_housing ol li p {
+        text-align: center;
+        font-size: 0.6rem; }
+      article .ate_housing ol li h3 {
+        text-align: center;
+        font-size: 0.8rem;
+        font-weight: bold; }
+  article .ate_housing ul {
+    padding: 0.4rem 0.75rem; }
+    article .ate_housing ul li {
+      width: 100%;
+      height: 1.5rem;
+      font-size: 0.6rem;
+      line-height: 1.5rem; }
+      article .ate_housing ul li span:nth-child(1) {
+        color: #aaa; }
+      article .ate_housing ul li span:nth-child(2) {
+        color: #252525; }
+  article .ate_configure h2 {
+    padding: 0.6rem 0.75rem;
+    font-size: 0.7rem;
+    color: #252525;
+    font-weight: bold;
+    border-bottom: 1px solid #e7e7e7; }
+  article .ate_configure ul {
+    padding: 0.3rem 0.75rem; }
+    article .ate_configure ul li {
+      width: 25%;
+      float: left;
+      height: 1.8rem;
+      position: relative; }
+      article .ate_configure ul li i {
+        position: relative;
+        top: 0.25rem;
+        display: inline-block;
+        width: 1.2rem;
+        height: 1.2rem;
+        margin-right: 0.25rem; }
+      article .ate_configure ul li span {
+        font-size: 0.6rem; }
+    article .ate_configure ul li:nth-child(1) i {
+      background: url("../images/Z_elevator.png") no-repeat;
+      background-size: 100%; }
+    article .ate_configure ul li:nth-child(2) i {
+      background: url("../images/Z_wardrobe.png") no-repeat;
+      background-size: 100%; }
+    article .ate_configure ul li:nth-child(3) i {
+      background: url("../images/Z_laundry.png") no-repeat;
+      background-size: 100%; }
+    article .ate_configure ul li:nth-child(4) i {
+      background: url("../images/Z_network.png") no-repeat;
+      background-size: 100%; }
+    article .ate_configure ul li:nth-child(5) i {
+      background: url("../images/Z_television.png") no-repeat;
+      background-size: 100%; }
+    article .ate_configure ul li:nth-child(6) i {
+      background: url("../images/Z_bed.png") no-repeat;
+      background-size: 100%; }
+    article .ate_configure ul li:nth-child(7) i {
+      background: url("../images/Z_conditioner.png") no-repeat;
+      background-size: 100%; }
+    article .ate_configure ul li:nth-child(8) i {
+      background: url("../images/Z_refrigerator.png") no-repeat;
+      background-size: 100%; }
+    article .ate_configure ul li:nth-child(9) i {
+      background: url("../images/Z_heater.png") no-repeat;
+      background-size: 100%; }
+    article .ate_configure ul li:nth-child(10) i {
+      background: url("../images/Z_heating.png") no-repeat;
+      background-size: 100%; }
+    article .ate_configure ul li:nth-child(11) i {
+      background: url("../images/Z_table.png") no-repeat;
+      background-size: 100%; }
+    article .ate_configure ul li:nth-child(12) i {
+      background: url("../images/Z_sofa.png") no-repeat;
+      background-size: 100%; }
+    article .ate_configure ul li:nth-child(13) i {
+      background: url("../images/Z_natural.png") no-repeat;
+      background-size: 100%; }
+  article .agent h2 {
+    padding: 12px 15px;
+    border-bottom: 1px solid #e7e7e7; }
+    article .agent h2 span {
+      float: left;
+      font-size: 0.7rem;
+      font-weight: bold;
+      height: 1.2rem;
+      line-height: 1.2rem; }
+    article .agent h2 i {
+      width: 1.2rem;
+      height: 1.2rem;
+      float: right;
+      background: url("../images/Z_right.png") no-repeat left;
+      background-size: 100%; }
+  article .agent .agent_div {
+    padding: 0.75rem; }
+    article .agent .agent_div img {
+      width: 2.75rem;
+      height: 2.75rem;
+      border-radius: 50%;
+      float: left; }
+    article .agent .agent_div .agent_div_s {
+      margin-left: 0.4rem;
+      float: left; }
+      article .agent .agent_div .agent_div_s p {
+        font-size: 0.6rem; }
+      article .agent .agent_div .agent_div_s p:nth-child(1) {
+        font-size: 0.8rem;
+        color: #252525; }
+      article .agent .agent_div .agent_div_s p:nth-child(2) {
+        margin: 0.25rem 0;
+        line-height: 100%; }
+        article .agent .agent_div .agent_div_s p:nth-child(2) i {
+          display: inline-block;
+          width: 0.6rem;
+          height: 0.6rem;
+          background: url("../images/Z_x.png") no-repeat left;
+          background-size: 100%;
+          line-height: 100%; }
+        article .agent .agent_div .agent_div_s p:nth-child(2) span {
+          display: inline-block;
+          font-size: 0.5rem;
+          padding: 0 0.05rem;
+          background: #f5a623;
+          color: #fff; }
+      article .agent .agent_div .agent_div_s p:nth-child(3) {
+        font-size: 0.6rem;
+        color: #878787;
+        margin-bottom: 0.25rem; }
+  article .agent .agent_p {
+    padding: 0 0.75rem 0.75rem;
+    font-size: 0.5rem; }
+  article .Geography h3 {
+    padding: 0.6rem 0.75rem;
+    border-bottom: 0.05rem solid #e7e7e7; }
+    article .Geography h3 span {
+      height: 1.2rem;
+      line-height: 1.2rem;
+      float: left;
+      font-size: 0.7rem;
+      font-weight: bold; }
+    article .Geography h3 i {
+      float: right;
+      width: 1.2rem;
+      height: 1.2rem;
+      background: url("../images/Z_right.png") no-repeat left;
+      background-size: 100%; }
+  article .Geography h4 {
+    padding: 0.75rem; }
+    article .Geography h4 p span:nth-child(1) {
+      font-size: 0.6rem;
+      color: #a79b9b; }
+    article .Geography h4 p span:nth-child(2) {
+      font-size: 0.6rem;
+      color: #4a4a4a; }
+    article .Geography h4 p:nth-child(2) {
+      margin-top: 0.4rem; }
+  article .Geography h5 a img {
+    width: 100%; }
+  article .property h3 {
+    padding: 12px 15px;
+    border-bottom: 1px solid #e7e7e7;
+    line-height: 1.2rem;
+    font-size: 0.7rem;
+    font-weight: bold; }
+  article .property .property_ul {
+    padding: 0.4rem 0.75rem; }
+    article .property .property_ul li {
+      overflow: hidden;
+      line-height: 1.5rem;
+      text-align: justify;
+      text-align-last: justify; }
+      article .property .property_ul li span:nth-child(1) {
+        font-size: 0.6rem;
+        color: #aaa;
+        float: left;
+        width: 3.45rem; }
+      article .property .property_ul li span:nth-child(2) {
+        float: left;
+        padding: 0 0.1rem;
+        color: #aaa; }
+      article .property .property_ul li span:nth-child(3) {
+        font-size: 0.6rem;
+        color: #252525;
+        display: inline-block;
+        float: left; }
+  article .recommend h3 {
+    font-size: 0.7rem;
+    color: #252525;
+    padding: 0.6rem 0.75rem;
+    font-weight: bold;
+    border-bottom: 0.05rem solid #e7e7e7; }
+  article .recommend .recommend_ul {
+    padding-left: 0.75rem;
+    border-bottom: 1px solid #e7e7e7;
+    overflow: hidden; }
+    article .recommend .recommend_ul li {
+      padding: 0.85rem 0.75rem 1rem 0;
+      border-bottom: 1px solid #e7e7e7;
+      overflow: hidden; }
+      article .recommend .recommend_ul li .recommend_ul_L {
+        margin-right: 0.45rem; }
+        article .recommend .recommend_ul li .recommend_ul_L img {
+          width: 5.35rem;
+          height: 3.9rem; }
+      article .recommend .recommend_ul li .recommend_ul_R {
+        width: calc(100% - 5.8rem);
+        height: 3.9rem;
+        /*line-height: 100%;*/ }
+        article .recommend .recommend_ul li .recommend_ul_R p {
+          /*font-size:0.65rem;*/
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          line-height: 100%; }
+        article .recommend .recommend_ul li .recommend_ul_R p:nth-child(1) {
+          font-size: 0.75rem;
+          color: #252525;
+          font-weight: bold;
+          margin-bottom: 0.4rem; }
+        article .recommend .recommend_ul li .recommend_ul_R p:nth-child(2) {
+          font-size: 0.6rem;
+          color: #252525;
+          margin-bottom: 0.4rem; }
+        article .recommend .recommend_ul li .recommend_ul_R p:nth-child(3) {
+          font-size: 0.6rem;
+          color: #b6bcc3;
+          margin-bottom: 0.4rem; }
+        article .recommend .recommend_ul li .recommend_ul_R p:nth-child(4) span {
+          float: left; }
+        article .recommend .recommend_ul li .recommend_ul_R p:nth-child(4) span:nth-child(1) {
+          margin-right: 0.15rem;
+          height: 0.6rem;
+          font-size: 0.6rem;
+          text-align: center;
+          line-height: 0.6rem;
+          color: #df3637;
+          border-radius: 0.1rem;
+          border: 0.05rem solid #df3031; }
+        article .recommend .recommend_ul li .recommend_ul_R p:nth-child(4) span:nth-child(2) {
+          border-radius: 0.1rem;
+          margin-right: 0.15rem;
+          height: 0.6rem;
+          font-size: 0.6rem;
+          text-align: center;
+          line-height: 0.6rem;
+          color: #fe7860;
+          border: 0.05rem solid #e93140; }
+        article .recommend .recommend_ul li .recommend_ul_R p:nth-child(4) span:nth-child(3) {
+          border-radius: 0.1rem;
+          margin-right: 0.15rem;
+          height: 0.6rem;
+          font-size: 0.6rem;
+          text-align: center;
+          line-height: 0.6rem;
+          color: #61b3ee;
+          border: 0.05rem solid #4baeee; }
+        article .recommend .recommend_ul li .recommend_ul_R p:nth-child(4) span:nth-child(4) {
+          border-radius: 0.1rem;
+          margin-right: 0.15rem;
+          height: 0.6rem;
+          font-size: 0.6rem;
+          text-align: center;
+          line-height: 0.6rem;
+          color: #df3031;
+          float: right; }
+    article .recommend .recommend_ul li:last-child {
+      border-bottom: 1px solid #fff; }
+  article .Station {
+    width: 18.75rem;
+    height: 2.4rem; }
+
+footer {
+  width: 18.75rem;
+  height: 2.4rem;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+  background: #f00; }
+  footer .foot {
+    float: left;
+    width: 28%;
+    padding: 0.3rem 0;
+    border-top: 1px solid #e7e7e7;
+    background: #fff;
+    line-height: 100%; }
+    footer .foot button:nth-child(1) {
+      float: left;
+      height: 100%;
+      width: 50%;
+      font-size: 0.5rem;
+      color: #4a4a4a;
+      text-align: center;
+      background: #fff;
+      border: none;
+      outline: none;
+      border-right: 1px solid #e7e7e7; }
+      footer .foot button:nth-child(1) i {
+        display: block;
+        width: 1rem;
+        height: 1rem;
+        margin: 0 auto 0.1rem;
+        background: url(../images/Z_ss.png) no-repeat;
+        background-size: 100%; }
+    footer .foot button:nth-child(2) {
+      float: left;
+      height: 100%;
+      width: 50%;
+      font-size: 0.5rem;
+      color: #4a4a4a;
+      text-align: center;
+      background: #fff;
+      border: none;
+      outline: none; }
+      footer .foot button:nth-child(2) i {
+        display: block;
+        width: 1rem;
+        height: 1rem;
+        margin: 0 auto 0.1rem;
+        background: url(../images/Z_xing.png) no-repeat;
+        background-size: 100%; }
+  footer .foot-s {
+    width: 72%;
+    float: right;
+    height: 2.4rem;
+    font-size: 0.65rem;
+    color: #fff;
+    background: #df3031;
+    border: none;
+    outline: none;
+    line-height: 2.4rem; }
+    footer .foot-s i {
+      display: inline-block;
+      position: relative;
+      top: 0.25rem;
+      width: 1rem;
+      height: 1rem;
+      background: url(../images/Z_dianhua.png) no-repeat;
+      background-size: contain;
+      margin-right: 3px; }

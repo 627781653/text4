@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size: 20px;font-family:'Microsoft YaHei', '微软雅黑', Helvetica, '黑体', Arial, Tahoma;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0/no">
+    <meta content="telephone=no,email=no" name="format-detection"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/vue1.js"></script>
+    <script src="js/vue-resource.js"></script>
+    <!--<script src="../index.js"></script>-->
+    <title>家家顺房产</title>
+    <script>
+        (function(){
+            function initFontSize(){
+                document.documentElement.style.fontSize=20*document.documentElement.clientWidth/375+'px';
+            }
+            initFontSize();
+            window.addEventListener('resize',initFontSize,false);
+        })();
+    </script>
+    <script>
+        window.onload=function(){
+            var vm = new Vue({
+                el:'#datav',
+                data:{
+                    xarr2:[],
+                    arr2:[]
+                },
+                created(){
+                    var _that = this;
+                    this.$http.get('/xDetail',{params:{}}).then(function(res){
+                        _that.arr2=res.data.data2;
+                        var arr3=[];
+                        for(var j=0;j<5;j++){
+                            var a=Math.floor(Math.random()*10);
+                            arr3.push(_that.arr2[a]);
+                        }
+                        _that.xarr2 = arr3;
+
+                    },function(){
+                        alert('后台连接失败');
+                    });
+                },
+                methods:{//绑定方法
+                    change:function(){
+                        var arr3=[];
+                        var x=[];
+                        function findInArr(item,arr){
+                            for(var i=0;i<arr.length;i++){
+                                if(arr[i]==item){
+                                    return true;
+                                }
+                            }
+                            return false;
+                        }
+                        while(x.length<5){
+                            var a=Math.floor(Math.random()*10);
+                            if(!findInArr(a,x)){
+                                x.push(a);
+                            }
+                        }
+                        for(var j=0;j<5;j++){
+                            arr3.push(this.arr2[x[j]]);
+                        }
+                        this.xarr2 = arr3;
+                    },
+                    //http://bi.jjshome.com/biadmin/images/s.gif?loc=http://wap.jjshome.com/?utm_source=220&utm_medium=a1&utm_campaign=pinzhuansousuo&utm_content=pz31http://hao.360.cn/&ref=&uid=7360c43a-23f9-cb79-f70d-2e41572f4f8a&nua=Mozilla/5.0%20(iPhone;%20CPU%20iPhone%20OS%209_1%20like%20Mac%20OS%20X)%20AppleWebKit/601.1.46%20(KHTML,%20like%20Gecko)%20Version/9.0%20Mobile/13B143%20Safari/601.1&scs=375*667&ver=JS-V2.0.1&evk=SJ00002&evv=5384
+                    search:function(){
+                        this.$http.jsonp('http://wap.jjshome.com/wap/esf/queryByContext',{params:{wd:'a'},jsonp:'cb'}).then(function(res){
+                          this.msg=res.data.s
+                        },function(){
+                            alert('链接失败')
+                        })
+                    }
+                }
+            });
+        }
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded',function(ev){
+            var oUl=document.querySelector('#tab div');
+            var aLi=oUl.querySelectorAll('a');
+            //console.log(aLi);
+            var x=0;
+            var iNow=0;
+            oUl.addEventListener('touchstart',function(ev){
+                var downX=ev.targetTouches[0].pageX;
+                var disX=downX-x;
+                oUl.style.WebkitTransition='none';
+                function fnMove(ev){
+                    x=ev.targetTouches[0].pageX-disX;
+                    oUl.style.WebkitTransform='translate3d('+x+'px)';
+                }
+                function fnEnd(ev){
+                    document.removeEventListener('touchmove',fnMove,false);
+                    document.removeEventListener('touchend',fnEnd,false);
+                    var upX=ev.changedTouches[0].pageX;
+                    if(Math.abs(upX-downX)>10){
+                        if(downX>upX){
+                            iNow++;
+                            if(iNow==aLi.length){
+                                //alert(aLi.length);
+                                iNow=aLi.length-1;
+                            }
+                        }else{
+                            iNow--;
+                            if(iNow==-1){
+                                iNow=0;
+                            }
+                        }
+                    }
+                    x=-iNow*aLi[0].offsetWidth;
+                    oUl.style.WebkitTransition='.5s all ease';
+                    oUl.style.WebkitTransform='translate3d('+x+'px,0,0)';
+                }
+                document.addEventListener('touchmove',fnMove,false);
+                document.addEventListener('touchend',fnEnd,false);
+            },false);
+            ev.preventDefault();
+            var oTypeselet=document.querySelector('.type-selected');
+            var oType=document.querySelector('.type');
+            oTypeselet.addEventListener('touchstart',function(ev){
+                if(oType.style.overflow=="visible"){
+                    oType.style.overflow="hidden"
+                }else{
+                    oType.style.overflow="visible"
+                }
+            },false);
+
+            var oSearch=document.querySelector('.search-inp');
+            var oDbox=document.querySelector('#dbox');
+            var oCbox=document.querySelector('#cbox');
+            var oQx=document.querySelector('#qx');
+
+            oSearch.addEventListener('touchstart',function(ev){
+                oDbox.style.display="none";
+                oCbox.style.display="block";
+            },false);
+            oQx.addEventListener('touchstart',function(ev){
+                oDbox.style.display="block";
+                oCbox.style.display="none";
+            },false);
+
+
+            var arr=['','二手房','新  房','租  房'];
+            var oTypeSel=document.querySelector('#type-select');
+            var aTypeLi=oTypeSel.querySelectorAll('li');
+            var oSeaXz=document.querySelector('.sea-xz');
+            var oSeSpan=document.querySelector('#se-span');
+            //console.log(aTypeLi);
+
+            oSeaXz.addEventListener('touchstart',function(ev){
+                if(oSeaXz.style.overflow=="visible"){
+                    oSeaXz.style.overflow="hidden"
+                }else{
+                    oSeaXz.style.overflow="visible"
+                }
+            },false);
+            for(var i=0;i<aTypeLi.length;i++){
+                aTypeLi[i].index=i;
+                aTypeLi[i].addEventListener('touchstart',function(ev){
+                    oSeSpan.innerHTML=arr[this.index];
+                },false);
+                aTypeLi[i].addEventListener('touchend',function(ev){
+                    oSeaXz.style.overflow="hidden";
+                },false);
+
+            };
+            var oChange=document.querySelector('.change');
+            var oEm=oChange.querySelector('em');
+            oChange.addEventListener('touchstart',function(ev){
+                //console.log(oEm);
+                oEm.style.WebkitTransform='rotate3d(360deg)';
+            },false);
+
+
+        },false);
+    </script>
+
+</head>
+<body id="datav">
+    <section id="dbox">
+        <header class="clearfix">
+            <h1 class="fl"><a href="#">家家顺房产</a></h1>
+            <div class="fl" onclick="window.location.href = 'html/index-city.html'">
+                <em>深圳</em>
+                <img src="images/x-topdown.png" alt="" />
+            </div>
+            <a href="html/load.html" class="login fr"></a>
+        </header>
+        <section class="top">
+            <div class="tab clearfix" id="tab">
+                <div id="tab-1">
+                    <a href="#" class="fl" >
+                        <img src="images/x-tab1.jpg" alt="">
+                    </a>
+                    <a href="#" class="fl">
+                        <img src="images/x-tab2.jpg" alt="">
+                    </a>
+                    <a href="#" class="fl">
+                        <img src="images/x-tab3.jpg" alt="">
+                    </a>
+                </div>
+
+            </div>
+            <div class="search clearfix">
+                <div class="type fl" >
+                    <i></i>
+                    <span class="type-selected">
+                    <a href="javascript:;">二手房</a>
+                    <a href="javascript:;">租房</a>
+                    <a href="javascript:;">新房</a>
+                </span>
+                </div>
+                <div class="search-inp fl">
+                    <input type="text" name="" placeholder="请输入楼盘或地名搜索" id="">
+                    <div>
+                        <img src="images/x-search.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="menu">
+            <ul>
+                <li>
+                    <a href="html/second-hand-house.html">
+                        <img src="images/x-ershoufa.png" alt="">
+                        <span>二手房</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="html/newhouse.html">
+                        <img src="images/x-xinfang.png" alt="">
+                        <span>新房</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="html/Rental.html">
+                        <img src="images/x-zufang.png" alt="">
+                        <span>租房</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="html/Information-details.html">
+                        <img src="images/x-zixun.png" alt="">
+                        <span>房产资讯</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="html/load.html">
+                        <img src="images/x-jiaoyi.png" alt="">
+                        <span>交易进度</span>
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <div class="space"></div>
+        <section class="public">
+            <div class="pub-title clearfix">
+                <h3 class="fl">大家都在看</h3>
+                <p class="fr change" @click="change">
+                    <em></em>
+                    <span>换一换</span>
+                </p>
+            </div>
+            <ul class="detail " id="detail">
+                <li v-for="val in xarr2 " track-by='$index' onclick="window.location.href='html/index-child.html'">
+                    <a href="#" class="clearfix">
+                        <div class="fl d-left">
+                            <img :src="val.src" alt="">
+                        </div>
+                        <div class=" d-right">
+                            <h4>{{val.title}}</h4>
+                            <p class="house-info"><span>{{val.houseInfo}}</span></p>
+                            <p class="name-price">
+                                <span class="name">{{val.name}}</span>
+                                <span class="price">{{val.price}}</span>
+                            </p>
+                            <p class="b-info clearfix">
+                                <span class="fl b-pub b-pub2">{{val.bInfo1}}</span>
+                                <span class="fl b-pub b-pub3">{{val.bInfo2}}</span>
+                                <span class="fr b-price">{{val.bPrice}}</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                
+            </ul>
+        </section>
+        <footer>
+            <div class="f-text">
+                <p>深圳市乐家网络科技有限公司 版权所有</p>
+                <p>粤ICP备13086611号-4</p>
+                <p>联系电话：0755-61634649</p>
+            </div>
+            <div class="app">
+                <a href="#">
+                    <img src="images/x-android.png" alt="">
+                </a>
+                <a href="#">
+                    <img src="images/x-iphone.png" alt="">
+                </a>
+            </div>
+        </footer>
+    </section>
+
+    <section style="display: none" class="search-child" id="cbox">
+        <div class="sea-t">
+            <div class="sea-inp">
+                <div class="sea-xz">
+                    <i></i>
+                    <span id="se-span">二手房</span>
+                    <ul id="type-select">
+                        <li></li>
+                        <li>二手房</li>
+                        <li>新房</li>
+                        <li>租房</li>
+                    </ul>
+                </div>
+                <div class="sea-det">
+                    <form id="form_context">
+                        <input type="text" class="ser-txt" placeholder="请输入楼盘或地名搜索" id="searchContent" @input="search()" maxlength="50">
+                    </form>
+                </div>
+            </div>
+            <a href="javascript:;" id="qx">取消</a>
+        </div>
+        <div class="sea-b">
+            <ul>
+                <li v-for="v in arrn">{{v}}</li>
+
+            </ul>
+        </div>
+    </section>
+
+</body>
+</html>

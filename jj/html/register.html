@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0/no">
+    <meta content="telephone=no,email=no" name="format-detection"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>Title</title>
+    <link href="../css/base.css" rel="stylesheet" />
+    <link href="../css/common.css" rel="stylesheet" />
+    <link href="../css/register.css" rel="stylesheet" />
+    <script>
+        (function(){
+            function initFontSize(){
+                document.documentElement.style.fontSize=20*document.documentElement.clientWidth/375+'px';
+            }
+            initFontSize();
+            window.addEventListener('resize',initFontSize,false);
+        })();
+    </script>
+    <script  src="../js/register.js"></script>
+</head>
+<body>
+    <header>
+        <a href="load.html"><</a>
+        <span>注册</span>
+    </header>
+    <section>
+        <ul class="sec1">
+            <li class="sec3">
+                <span>手机号</span>
+                <input type="text" name="" value="请输入手机号码" />
+                <p class="sec4">|&nbsp&nbsp 获取验证码</p>
+            </li>
+            <li>
+                <span>验证码</span>
+                <input type="text" name="" value="请输入验证码(4-6位)" />
+            </li>
+            <li class="sec5">
+                <span>密码</span>
+                <input type="password" name="" placeholder="请输入密码(6-12位数字、字母)" />
+                <b></b>
+            </li>
+        </ul>
+        <a href="javascript:;">立即注册</a>
+        <p>点击上面的"注册"按钮,即表示同意</p>
+        <p class="sec2">家家顺房产网相关《注册协议》和《隐私协议》</p>
+    </section>
+</body>
+</html>

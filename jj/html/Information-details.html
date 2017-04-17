@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0/no">
+    <meta content="telephone=no,email=no" name="format-detection"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>资讯详情</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/Information-details.css">
+    <script src="../js/vue2.2.0.js"></script>
+    <script src="../js/vue-router.js"></script>
+    <script src="../js/vue1.js"></script>
+    <script src="../js/vue-resource.js"></script>
+    <script>
+        (function () {
+            function initFontSize() {
+                document.documentElement.style.fontSize = 20 * document.documentElement.clientWidth / 375 + 'px';
+            }
+
+            initFontSize();
+
+            window.addEventListener('resize', initFontSize, false);
+        })();
+        window.onload = function () {
+
+        }
+    </script>
+    <script>
+        window.onload=function(){
+            var vm = new Vue({
+                el:'#info',
+                data:{
+                    rarr:[]
+                },
+                created(){
+                    var _that = this;
+                    this.$http.get('/info',{params:{}}).then(function(res){
+                        //console.log(res.data.data);
+                        _that.rarr = res.data.data;
+                        //console.log(_that.rarr[0].src);
+                    },function(){
+                        alert('后台连接失败');
+                    });
+                }
+            });
+        }
+    </script>
+</head>
+<body id="info">
+
+<header class="head" >
+    <div class="head-1">
+        <a class="fl a-1" href="../index.html"><img src="../images/r-topleft.png"></a>
+        <h2>房产资讯</h2>
+    </div>
+</header>
+<div class="content" >
+    <div class="c" v-for="v in rarr">
+        <a :href="v.href" class="con-1">
+            <div class="con-1-1 fl">
+                <h3>{{v.h3}}</h3>
+                <p class="con-p">{{v.conp}}</p>
+                <span class="con-s">{{v.date}}</span>
+            </div>
+            <img alt="" class="fl" :src="v.src">
+        </a>
+    </div>
+    <!--<div class="c">
+        <a href="Real%20estate%20information2.html" class="con-1">
+            <div class="con-1-1 fl">
+                <h3>珠三角各主要城市，限购限贷政策一览表</h3>
+                <p class="con-p">每个城市的限购限贷政策不尽相同，家家顺为...</p>
+                <span class="con-s">2017-03-27</span>
+            </div>
+            <img alt="" class="fl" src="../images/r-2.jpg">
+        </a>
+    </div>-->
+    <!--<div class="c">
+        <a href="../html/Real estate information3.html" class="con-1">
+            <div class="con-1-1 fl">
+                <h3>从三角洲到大湾区 中国打造世界经济版图中新亮点</h3>
+                <div>
+                    <p class="con-p">粤港澳大湾区——这个新名词今年3月5日首...</p>
+                    <span class="con-s">2017-03-24</span>
+                </div>
+            </div>
+            <img alt="" class="fl" src="../images/r-3.jpg">
+        </a>
+    </div>
+    <div class="c">
+        <a href="../html/Real estate information4.html" class="con-1">
+            <div class="con-1-1 fl">
+                <h3>福田龙华学位申请推至4月中下旬 部分区域学位紧张</h3>
+                <p class="con-p">今年福田区、龙华区的学位申请时间将推迟到...</p>
+                <span class="con-s">2017-03-24</span>
+            </div>
+            <img alt="" class="fl" src="../images/r-4.jpg">
+        </a>
+    </div>
+    <div class="c">
+        <a href="Real%20estate%20information5.html" class="con-1">
+            <div class="con-1-1 fl">
+                <h3>深中通道初步设计通过交通部审查 12月主体隧道开工</h3>
+                <p class="con-p">据了解，目前项目正在稳步推进西人工岛施工...</p>
+                <span class="con-s">2017-03-24</span>
+            </div>
+            <img alt="" class="fl" src="../images/r-5.jpg">
+        </a>
+    </div>
+    <div class="c">
+        <a href="Real%20estate%20information6.html" class="con-1">
+            <div class="con-1-1 fl">
+                <h3>市民齐点赞！光明城高铁站将新增6个停靠车次</h3>
+                <p class="con-p">高峰期增停列车后，朱先生打算放弃自驾，他...</p>
+                <span class="con-s">2017-03-23</span>
+            </div>
+            <img alt="" class="fl" src="../images/r-6.jpg">
+        </a>
+    </div>
+    <div class="c">
+        <a href="Real%20estate%20information7.html" class="con-1">
+            <div class="con-1-1 fl">
+                <h3>今年深圳将新增海绵城市 建设面积30平方公里以上</h3>
+                <p class="con-p">根据海绵城市建设“十三五”总体工作目标，...</p>
+                <span class="con-s">2017-03-23</span>
+            </div>
+            <img alt="" class="fl" src="../images/r-7.jpg">
+        </a>
+    </div>
+    <div class="c">
+        <a href="Real%20estate%20information8.html" class="con-1">
+            <div class="con-1-1 fl">
+                <h3>盐田今年至少启动6个旧改 土地出让面积8公顷以上</h3>
+                <p class="con-p">据悉，2017年盐田区力争实现至少6个项...</p>
+                <span class="con-s">2017-03-23</span>
+            </div>
+            <img alt="" class="fl" src="../images/r-8.jpg">
+        </a>
+    </div>
+    <div class="c">
+        <a href="Real%20estate%20information9.html" class="con-1">
+            <div class="con-1-1 fl">
+                <h3>你知道在深圳购买新房要交哪些税吗？</h3>
+                <p class="con-p">购买新房税费比较少，主要有过户、按揭及入...</p>
+                <span class="con-s">2017-03-22</span>
+            </div>
+            <img alt="" class="fl" src="../images/r-9.jpg">
+        </a>
+    </div>
+    <div class="c">
+        <a href="Real%20estate%20information10.html" class="con-1">
+            <div class="con-1-1 fl">
+                <h3>武深高速惠州段预计明年底建成，经过博罗、龙门两县</h3>
+                <p class="con-p">21日，武深高速公路惠州段建设推进会召开...</p>
+                <span class="con-s">2017-03-22</span>
+            </div>
+            <img alt="" class="fl" src="../images/r-0.jpg">
+        </a>
+    </div>-->
+</div>
+<footer>
+    <a href="javascript:;">↑上拉加载更多</a>
+</footer>
+</body>
+</html>

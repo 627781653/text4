@@ -1,0 +1,103 @@
+html{
+   font-size:20px;
+ }
+@function px2rem($px) {
+  @return $px / 20px * 1rem;
+}
+/*
+width:px2rem(20px);*/
+
+header{
+  height: px2rem(44px);
+  width:100%;
+  line-height:px2rem(44px);
+  background: #df3031;
+  a{
+    color:#fff;
+    font-size:px2rem(16px);
+    margin-left:px2rem(14px) ;
+  }
+  span{
+    color:#fff;
+    font-size:px2rem(18px);
+    margin-left:px2rem(130px) ;
+  }
+}
+section{
+  .sec1{
+    width:100%;
+    height: px2rem(44px);
+    line-height:px2rem(44px);
+    display:-webkit-box;
+    li{
+      -webkit-box-flex: 1;
+      text-align: center;
+      border-bottom:px2rem(2px) solid #e7e7e7;
+      a{
+        font-size:px2rem(16px);
+        color:#252525;
+      }
+    }
+    .sli{
+      border-bottom:px2rem(2px) solid #df3031;
+    }
+  }
+  .sec2{
+    width:100%;
+    height: px2rem(102px);
+    display:-webkit-box;
+    -webkit-box-orient: vertical;
+    li{
+      -webkit-box-flex:1;
+      border-bottom:px2rem(1px) solid #a5a3a3;
+      display:-webkit-box;
+      span{
+        font-size:px2rem(16px);
+        color:#252525;
+        display:block;
+        margin-top:px2rem(18px);
+        margin-left:px2rem(16px);
+        margin-right:px2rem(20px);
+      }
+      input{
+        display: block;
+        width: 100%;
+        height: px2rem(50px);
+        font-size:px2rem(16px);
+        color: #b2b8c2;
+        line-height: normal;
+        -webkit-box-flex: 1;
+        border:none;
+      }
+    }
+  }
+}
+footer{
+  width:100%;
+  height:px2rem(566px);
+  background: #f5f5f9;
+ text-align: center;
+  .fot1{
+    display:inline-block;
+    margin-top:px2rem(18px);
+    width:px2rem(346px);
+    height: px2rem(44px);
+    line-height: px2rem(44px);
+    text-align: center;
+    font-size:px2rem(18px);
+    background: #eca6a8;
+    color:#f9f9fb;
+    border-radius: px2rem(8px);
+    margin-bottom:px2rem(20px);
+  }
+  .fot2{
+    font-size:px2rem(14px);
+    color:#df3031;
+    margin-left:px2rem(16px);
+    margin-right:px2rem(188px);
+  }
+  .fot3{
+    font-size:px2rem(16px);
+    color:#b2b8c2;
+  }
+}

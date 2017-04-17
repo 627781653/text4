@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0/no">
+    <meta content="telephone=no,email=no" name="format-detection"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>Title</title>
+    <link href="../css/base.css" rel="stylesheet" />
+    <link href="../css/common.css" rel="stylesheet" />
+    <link href="../css/tSchedule.css" rel="stylesheet" />
+    <script>
+        (function(){
+            function initFontSize(){
+                document.documentElement.style.fontSize=20*document.documentElement.clientWidth/375+'px';
+            }
+            initFontSize();
+            window.addEventListener('resize',initFontSize,false);
+        })();
+    </script>
+    <script>
+        window.onload=function(){
+            var oLi=document.getElementsByTagName('input')[0];
+            var oA=document.getElementById('a');
+            var reg=/^\d{4}$/;
+
+            oLi.onblur=function(){
+                var str=oLi.value;
+                if(str){
+                    if(!reg.test(str)){
+                        alert('请填写正确的号码')
+                    }else{
+                        oA.style.background='green';
+                    }
+                }else{
+                    alert('请填写号码')
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <a href="personal.html"><</a>
+        <span>查询验证</span>
+    </header>
+    <section>
+        <h2>请输入交易所用身份证后4位，用于查询验证</h2>
+        <input type="text" name="" value="" />
+        <a href="javascript:;" id="a">验证</a>
+    </section>
+</body>
+</html>

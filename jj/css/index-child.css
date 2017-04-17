@@ -1,0 +1,294 @@
+html {
+  font-size: 20px; }
+
+/*
+width:px2rem(20px);*/
+header {
+  width: 100%; }
+  header div {
+    height: 2.2rem;
+    background: #df3031;
+    line-height: 2.2rem;
+    font-size: 0.8rem;
+    color: #fff; }
+    header div span {
+      margin-left: 0.7rem; }
+    header div a {
+      font-size: 0.8rem;
+      color: #fff;
+      margin-left: 5.6rem; }
+  header img {
+    width: 100%;
+    height: 10.6rem; }
+
+section {
+  width: 100%;
+  background: #f5f5f9; }
+  section .sec1 {
+    padding: 0 0.8rem;
+    height: 16.7rem;
+    background: white;
+    border-bottom: 0.05rem solid #e8e8e8;
+    margin-bottom: 0.5rem; }
+    section .sec1 .sec2 {
+      margin-top: 0.7rem; }
+      section .sec1 .sec2 h2 {
+        font-size: 0.9rem;
+        color: #4a4a4a;
+        line-height: 1.5rem;
+        font-weight: bold; }
+      section .sec1 .sec2 span {
+        line-height: 2.7rem;
+        font-size: 1.4rem;
+        color: #df3031;
+        font-weight: bold; }
+      section .sec1 .sec2 b {
+        font-size: 1rem;
+        color: #df3031;
+        margin-top: 1.2rem; }
+    section .sec1 .sec3 {
+      height: 3.1rem;
+      border-top: 0.05rem solid #e8e8e8;
+      border-bottom: 0.05rem solid #e8e8e8;
+      padding-top: 0.6rem; }
+      section .sec1 .sec3 li {
+        width: 5.5rem;
+        height: 2.1rem;
+        text-align: center;
+        border-right: 0.05rem solid #e7e7e7; }
+        section .sec1 .sec3 li p {
+          font-size: 0.8rem;
+          color: #808080; }
+        section .sec1 .sec3 li span {
+          font-size: 0.8rem;
+          color: #252525;
+          font-weight: bold; }
+      section .sec1 .sec3 .sec4 {
+        border-right: none; }
+    section .sec1 dl {
+      margin-top: 0.4rem; }
+      section .sec1 dl dt {
+        margin-bottom: 0.3rem; }
+        section .sec1 dl dt a {
+          display: inline-block;
+          width: 3.8rem;
+          height: 0.8rem;
+          border: 0.05rem solid #e93140;
+          border-radius: 0.2rem;
+          font-size: 0.6rem;
+          color: #e93140;
+          text-align: center;
+          line-height: 0.8rem;
+          margin-right: 0.3rem; }
+        section .sec1 dl dt span {
+          display: inline-block;
+          width: 3.8rem;
+          height: 0.8rem;
+          border: 0.05rem solid #e93140;
+          text-align: center;
+          line-height: 0.8rem;
+          font-size: 0.6rem;
+          border-radius: 0.2rem;
+          color: #61b3ee; }
+      section .sec1 dl dd .sec5 div {
+        width: 8.4rem;
+        line-height: 1.5rem; }
+        section .sec1 dl dd .sec5 div span {
+          font-size: 0.7rem;
+          color: #c1b1ac;
+          margin-right: 0.2rem; }
+        section .sec1 dl dd .sec5 div b {
+          font-size: 0.8rem;
+          color: #252525; }
+  section .se1 {
+    height: 19.2rem;
+    border-top: 0.05rem solid #e8e8e8;
+    border-bottom: 0.05rem solid #e8e8e8;
+    background: white; }
+    section .se1 h3 {
+      line-height: 2.5rem;
+      font-size: 0.9rem;
+      color: #3d4245;
+      font-weight: bold;
+      border-bottom: 0.05rem solid #e8e8e8;
+      padding: 0 0.8rem; }
+    section .se1 h5 {
+      line-height: 1.8rem;
+      font-size: 0.8rem;
+      color: #9b9b9b;
+      padding: 0 0.8rem; }
+    section .se1 p {
+      padding: 0 0.8rem;
+      line-height: 1.6rem;
+      font-size: 0.8rem;
+      color: #4a4a4a; }
+    section .se1 a {
+      display: block;
+      width: 17.3rem;
+      height: 2.3rem;
+      background: #f8f8f8;
+      text-align: center;
+      line-height: 2.3rem;
+      font-size: 0.8rem;
+      color: #8d9fb5;
+      margin-left: 0.8rem;
+      margin-top: 0.4rem; }
+  section .se2 {
+    height: 14.8rem;
+    background: white;
+    border-top: 0.05rem solid #e8e8e8;
+    border-bottom: 0.05rem solid #e8e8e8;
+    margin-top: 0.5rem; }
+    section .se2 h3 {
+      height: 2.4rem;
+      line-height: 2.4rem;
+      border-bottom: 0.05rem solid #e8e8e8;
+      padding: 0 0.8rem;
+      font-size: 0.8rem;
+      color: #252525;
+      font-weight: bold; }
+    section .se2 ul {
+      padding: 0 0.8rem;
+      margin-top: 0.4rem; }
+      section .se2 ul li {
+        line-height: 1.5rem; }
+        section .se2 ul li span {
+          font-size: 0.7rem;
+          color: #aaa;
+          display: inline-block;
+          width: 4.4rem; }
+        section .se2 ul li b {
+          font-size: 0.7rem;
+          color: #252525;
+          display: inline-block;
+          width: 12.2rem; }
+  section .se3 {
+    height: 17.2rem;
+    background: white;
+    border-top: 0.05rem solid #e8e8e8;
+    border-bottom: 0.05rem solid #e8e8e8;
+    margin-top: 0.5rem; }
+    section .se3 .se6 {
+      padding: 0 0.8rem;
+      height: 2.4rem;
+      line-height: 2.4rem; }
+      section .se3 .se6 h3 {
+        font-size: 0.8rem;
+        color: #252525;
+        font-weight: bold;
+        margin-right: 0.5rem; }
+      section .se3 .se6 span {
+        font-size: 0.8rem;
+        color: #4a4a4a; }
+      section .se3 .se6 b {
+        font-size: 0.8rem;
+        color: #df3031; }
+    section .se3 ul li {
+      padding: 0 0.8rem;
+      height: 4.9rem;
+      border-top: 0.05rem solid #e7e7e7; }
+    section .se3 ul .se4 {
+      width: 2.8rem;
+      height: 2.8rem;
+      border-radius: 50%;
+      margin-top: 0.8rem;
+      margin-right: 0.4rem; }
+    section .se3 ul .se5 {
+      margin-top: 1rem; }
+      section .se3 ul .se5 h6 {
+        font-size: 0.8rem;
+        color: #252525;
+        /*margin-bottom:px2rem(4px);*/ }
+      section .se3 ul .se5 i {
+        width: 3.7rem;
+        height: 0.6rem;
+        background: url(../images/xq1.png) no-repeat;
+        display: inline-block; }
+      section .se3 ul .se5 span {
+        display: inline-block;
+        width: 1rem;
+        height: 0.8rem;
+        line-height: 0.8rem;
+        text-align: center;
+        font-size: 0.5rem;
+        color: #fdf9ff;
+        margin-left: 0.2rem;
+        background: #f5a623; }
+      section .se3 ul .se5 p {
+        font-size: 0.6rem;
+        color: #878787; }
+    section .se3 ul .se7 {
+      margin-top: 1.3rem; }
+      section .se3 ul .se7 img {
+        width: 1.6rem;
+        height: 1.6rem; }
+      section .se3 ul .se7 p {
+        margin-top: 0.4rem;
+        margin-left: 0.2rem;
+        font-size: 0.6rem;
+        color: #4a4f5a; }
+  section .s1 {
+    height: 10rem; }
+    section .s1 .se6 {
+      border-bottom: none; }
+    section .s1 ul li {
+      height: 2.5rem;
+      line-height: 2.5rem;
+      border-top: 0.05rem solid #e8e8e8;
+      padding: 0 0.8rem; }
+      section .s1 ul li h4 {
+        font-size: 0.7rem;
+        color: #000; }
+      section .s1 ul li p {
+        font-size: 0.7rem;
+        color: #aaa; }
+
+footer {
+  height: 2.5rem;
+  background: #f5f5f9;
+  padding-top: 0.5rem; }
+  footer ul .fot1 {
+    padding-top: 0.3rem;
+    width: 5.3rem;
+    background: white;
+    border-top: 0.05rem solid #e8e8e8; }
+    footer ul .fot1 div {
+      width: 2.6rem;
+      height: 2rem;
+      border-right: 0.05rem solid #e8e8e8;
+      text-align: center; }
+      footer ul .fot1 div i {
+        width: 0.8rem;
+        height: 1rem;
+        background: url(../images/xq3.png) no-repeat;
+        display: block;
+        margin-left: 1rem; }
+      footer ul .fot1 div p {
+        font-size: 0.6rem;
+        color: #606060; }
+    footer ul .fot1 .fot2 {
+      border-right: none; }
+      footer ul .fot1 .fot2 i {
+        display: block;
+        margin-left: 0.8rem;
+        width: 1.1rem;
+        height: 1.1rem;
+        background: url(../images/xq4.png) no-repeat; }
+      footer ul .fot1 .fot2 p {
+        font-size: 0.6rem;
+        color: #606060; }
+  footer ul .fot3 {
+    width: 13.2rem;
+    height: 2.4rem;
+    background: #df3031;
+    text-align: center;
+    line-height: 2.4rem; }
+    footer ul .fot3 i {
+      width: 0.8rem;
+      height: 0.8rem;
+      background: url(../images/xq5.png) no-repeat;
+      display: inline-block;
+      margin-top: 0.9rem; }
+    footer ul .fot3 a {
+      font-size: 0.8rem;
+      color: #fff; }

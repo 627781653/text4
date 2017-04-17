@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0/no">
+    <meta content="telephone=no,email=no" name="format-detection"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>Title</title>
+    <link href="../css/base.css" rel="stylesheet" />
+    <link href="../css/common.css" rel="stylesheet" />
+    <link href="../css/MyCollections.css" rel="stylesheet" />
+    <script>
+        (function(){
+            function initFontSize(){
+                document.documentElement.style.fontSize=20*document.documentElement.clientWidth/375+'px';
+            }
+            initFontSize();
+            window.addEventListener('resize',initFontSize,false);
+        })();
+    </script>
+    <script>
+        window.onload=function(){
+            var aLi=document.querySelectorAll('li');
+            for(var i=0;i<aLi.length;i++){
+                aLi[i].onclick=function(){
+                    for(var i=0;i<aLi.length;i++){
+                        aLi[i].className='';
+                    }
+                    this.className='sli';
+                }
+            };
+        };
+    </script>
+</head>
+<body>
+    <header>
+        <a href="personal.html"><</a>
+        <span>我的收藏</span>
+    </header>
+    <section>
+        <ul class="sec1">
+            <li class="sli"><a href="javascript:;">二手房</a></li>
+            <li><a href="javascript:;" id="li2">租房</a></li>
+        </ul>
+        <img src="../images/q2.jpg" alt="" />
+        <h4>还没有收藏的房源</h4>
+        <p>唔~您还没有喜欢的房子，快去看一套吧</p>
+        <a href="javascript:;" class="sec2">马上找房</a>
+    </section>
+</body>
+</html>

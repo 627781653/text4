@@ -1,0 +1,61 @@
+html {
+  font-size: 20px; }
+
+/*
+width:px2rem(20px);*/
+header {
+  height: 2.2rem;
+  width: 100%;
+  line-height: 2.2rem;
+  background: #df3031; }
+  header a {
+    color: #fff;
+    font-size: 0.8rem;
+    margin-left: 0.7rem; }
+  header span {
+    color: #fff;
+    font-size: 0.9rem;
+    margin-left: 5.5rem; }
+
+section {
+  height: 33.9rem;
+  width: 100%;
+  background: #f5f5f9; }
+  section .sec1 {
+    width: 100%;
+    height: 2.2rem;
+    line-height: 2.2rem;
+    display: -webkit-box;
+    background: #fff; }
+    section .sec1 li {
+      -webkit-box-flex: 1;
+      text-align: center;
+      border-bottom: 0.1rem solid #e7e7e7; }
+      section .sec1 li a {
+        font-size: 0.8rem;
+        color: #252525; }
+    section .sec1 .sli {
+      border-bottom: 0.1rem solid #df3031; }
+  section h4 {
+    width: 100%;
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #808080; }
+  section p {
+    text-align: center;
+    font-size: 0.7rem;
+    color: #808080;
+    margin-bottom: 2.2rem; }
+  section .sec2 {
+    text-align: center;
+    width: 8.5rem;
+    height: 1.8rem;
+    border: 0.05rem solid #df3031;
+    line-height: 1.8rem;
+    font-size: 0.8rem;
+    margin-left: 5rem;
+    color: #df3031;
+    display: block;
+    border-radius: 0.3rem; }

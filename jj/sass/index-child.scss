@@ -1,0 +1,373 @@
+html{
+  font-size:20px;
+}
+@function px2rem($px) {
+  @return $px / 20px * 1rem;
+}
+/*
+width:px2rem(20px);*/
+$yb:100%;
+$bs:#fff;
+$bd:#e8e8e8;
+header{
+  width:$yb;
+  div{
+    height: px2rem(44px);
+    background: #df3031;
+    line-height:px2rem(44px);
+    font-size:px2rem(16px);
+    color:#fff;
+    span{
+      margin-left:px2rem(14px);
+    }
+    a{
+      font-size:px2rem(16px);
+      color:#fff;
+      margin-left:px2rem(112px);
+    }
+  }
+  img{
+    width:$yb;
+    height: px2rem(212px);
+  }
+}
+section{
+  width:$yb;
+  background: #f5f5f9;
+  .sec1{
+    padding:0 px2rem(16px);
+    height: px2rem(334px);
+    background: $bs;
+    border-bottom:px2rem(1px) solid $bd;
+    margin-bottom:px2rem(10px);
+    .sec2{
+      margin-top:px2rem(14px);
+      h2{
+        font-size:px2rem(18px);
+        color:#4a4a4a;
+        line-height:px2rem(30px);
+        font-weight:bold;
+      }
+      span{
+        line-height:px2rem(54px);
+        font-size:px2rem(28px);
+        color:#df3031;
+        font-weight:bold;
+      }
+      b{
+        font-size:px2rem(20px);
+        color:#df3031;
+        margin-top:px2rem(24px);
+      }
+    }
+    .sec3{
+      height:px2rem(62px);
+      border-top:px2rem(1px) solid $bd;
+      border-bottom:px2rem(1px) solid $bd;
+      padding-top:px2rem(12px);
+      li{
+        width:px2rem(110px);
+        height: px2rem(42px);
+        text-align: center;
+        border-right:px2rem(1px) solid #e7e7e7;
+        p{
+          font-size:px2rem(16px);
+          color:#808080;
+        }
+        span{
+          font-size:px2rem(16px);
+          color:#252525;
+          font-weight:bold;
+        }
+      }
+      .sec4{
+        border-right:none;
+      }
+    }
+    dl{
+      margin-top:px2rem(8px);
+      dt{
+        margin-bottom:px2rem(6px);
+        a{
+          display:inline-block;
+          width:px2rem(76px);
+          height: px2rem(16px);
+          border:px2rem(1px) solid #e93140;
+          border-radius: px2rem(4px);
+          font-size:px2rem(12px);
+          color:#e93140;
+          text-align:center;
+          line-height:px2rem(16px);
+          margin-right:px2rem(6px);
+        }
+        span{
+          display:inline-block;
+          width:px2rem(76px);
+          height: px2rem(16px);
+          border:px2rem(1px) solid #e93140;
+          text-align:center;
+          line-height:px2rem(16px);
+          font-size:px2rem(12px);
+          border-radius: px2rem(4px);
+          color:#61b3ee;
+        }
+      }
+      dd{
+        .sec5{
+          div{
+            width:px2rem(168px);
+            line-height:px2rem(30px);
+            span{
+              font-size:px2rem(14px);
+              color:#c1b1ac;
+              margin-right:px2rem(4px);
+            }
+            b{
+              font-size:px2rem(16px);
+              color:#252525;
+            }
+          }
+        }
+      }
+    }
+  }
+  .se1{
+    height:px2rem(384px);
+    border-top:px2rem(1px) solid $bd;
+    border-bottom:px2rem(1px) solid $bd;
+    background: $bs;
+    h3{
+      line-height:px2rem(50px);
+      font-size:px2rem(18px);
+      color:#3d4245;
+      font-weight:bold;
+      border-bottom:px2rem(1px) solid $bd;
+      padding:0 px2rem(16px);
+    }
+    h5{
+      line-height:px2rem(36px);
+      font-size:px2rem(16px);
+      color:#9b9b9b;
+      padding:0 px2rem(16px);
+    }
+    p{
+      padding:0 px2rem(16px);
+      line-height:px2rem(32px);
+      font-size:px2rem(16px);
+      color:#4a4a4a;
+    }
+    a{
+      display:block;
+      width:px2rem(346px);
+      height: px2rem(46px);
+      background: #f8f8f8;
+      text-align: center;
+      line-height:px2rem(46px);
+      font-size:px2rem(16px);
+      color:#8d9fb5;
+      margin-left:px2rem(16px);
+      margin-top:px2rem(8px);
+    }
+  }
+  .se2{
+    height: px2rem(296px);
+    background: $bs;
+    border-top:px2rem(1px) solid $bd;
+    border-bottom:px2rem(1px) solid $bd;
+    margin-top:px2rem(10px);
+    h3{
+      height:px2rem(48px);
+      line-height:px2rem(48px);
+      border-bottom:px2rem(1px) solid $bd;
+      padding:0 px2rem(16px);
+      font-size:px2rem(16px);
+      color:#252525;
+      font-weight:bold;
+    }
+    ul{
+      padding:0 px2rem(16px);
+      margin-top:px2rem(8px);
+      li{
+        line-height:px2rem(30px);
+        span{
+          font-size:px2rem(14px);
+          color:#aaa;
+          display:inline-block;
+          width:px2rem(88px);
+        }
+        b{
+          font-size:px2rem(14px);
+          color:#252525;
+          display:inline-block;
+          width:px2rem(244px);
+        }
+      }
+    }
+  }
+  .se3{
+    height: px2rem(344px);
+    background: $bs;
+    border-top:px2rem(1px) solid $bd;
+    border-bottom:px2rem(1px) solid $bd;
+    margin-top:px2rem(10px);
+    .se6{
+      padding:0 px2rem(16px);
+      height:px2rem(48px);
+      line-height:px2rem(48px);
+      h3{
+        font-size:px2rem(16px);
+        color:#252525;
+        font-weight:bold;
+        margin-right:px2rem(10px);
+      }
+      span{
+        font-size:px2rem(16px);
+        color:#4a4a4a;
+      }
+      b{
+        font-size:px2rem(16px);
+        color:#df3031;
+      }
+    }
+    ul{
+      li{
+        padding:0 px2rem(16px);
+        height:px2rem(98px);
+        border-top:px2rem(1px) solid #e7e7e7;
+      }
+      .se4{
+        width:px2rem(56px);
+        height:px2rem(56px);
+        border-radius: 50%;
+        margin-top:px2rem(16px);
+        margin-right:px2rem(8px);
+      }
+      .se5{
+        margin-top:px2rem(20px);
+        h6{
+          font-size:px2rem(16px);
+          color:#252525;
+          /*margin-bottom:px2rem(4px);*/
+        }
+        i{
+          width:px2rem(74px);
+          height:px2rem(12px);
+          background: url(../images/xq1.png) no-repeat;
+          display:inline-block;
+        }
+        span{
+          display:inline-block;
+          width:px2rem(20px);
+          height: px2rem(16px);
+          line-height:px2rem(16px);
+          text-align: center;
+          font-size:px2rem(10px);
+          color:#fdf9ff;
+          margin-left:px2rem(4px);
+          background: #f5a623;
+        }
+        p{
+          font-size:px2rem(12px);
+          color:#878787;
+        }
+      }
+      .se7{
+        margin-top:px2rem(26px);
+        img{
+          width:px2rem(32px);
+          height:px2rem(32px)
+        }
+        p{
+          margin-top:px2rem(8px);
+          margin-left:px2rem(4px);
+          font-size:px2rem(12px);
+          color:#4a4f5a;
+        }
+      }
+    }
+  }
+  .s1{
+    height:px2rem(200px);
+    .se6{
+      border-bottom:none;
+    }
+    ul{
+      li{
+        height:px2rem(50px);
+        line-height:px2rem(50px);
+        border-top:px2rem(1px) solid $bd;
+        padding:0 px2rem(16px);
+        h4{
+          font-size:px2rem(14px);
+          color:#000;
+        }
+        p{
+          font-size:px2rem(14px);
+          color:#aaa;
+        }
+      }
+    }
+  }
+}
+footer{
+  height:px2rem(50px);
+  background: #f5f5f9;
+  padding-top:px2rem(10px);
+  ul{
+    .fot1{
+      padding-top:px2rem(6px);
+      width:px2rem(106px);
+      background: $bs;
+      border-top:px2rem(1px) solid $bd;
+      div{
+        width:px2rem(52px);
+        height: px2rem(40px);
+        border-right:px2rem(1px) solid $bd;
+        text-align: center;
+        i{
+          width:px2rem(16px);
+          height:px2rem(20px);
+          background: url(../images/xq3.png) no-repeat;
+          display:block;
+          margin-left:px2rem(20px);
+        }
+        p{
+          font-size:px2rem(12px);
+          color:#606060;
+        }
+      }
+      .fot2{
+        border-right:none;
+        i{
+          display:block;
+          margin-left: px2rem(16px);
+          width:px2rem(22px);
+          height: px2rem(22px);
+          background: url(../images/xq4.png) no-repeat;
+        }
+        p{
+          font-size:px2rem(12px);
+          color:#606060;
+        }
+      }
+    }
+    .fot3{
+      width:px2rem(264px);
+      height:px2rem(48px);
+      background: #df3031;
+      text-align: center;
+      line-height:px2rem(48px);
+      i{
+        width:px2rem(16px);
+        height:px2rem(16px);
+        background: url(../images/xq5.png) no-repeat;
+        display:inline-block;
+        margin-top:px2rem(18px);
+      }
+      a{
+        font-size:px2rem(16px);
+        color:#fff;
+      }
+    }
+  }
+}

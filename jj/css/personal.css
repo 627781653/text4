@@ -1,0 +1,68 @@
+html {
+  font-size: 20px; }
+
+/*
+width:px2rem(20px);*/
+header {
+  height: 7rem;
+  width: 100%; }
+  header img {
+    width: 100%;
+    height: 100%; }
+  header i {
+    width: 3.7rem;
+    height: 3.7rem;
+    background: url(../images/q3.png) no-repeat;
+    top: 1rem;
+    left: 1rem; }
+  header p {
+    top: 2.2rem;
+    left: 4.7rem;
+    font-size: 0.8rem;
+    color: #fff; }
+
+section {
+  height: 33.9rem;
+  width: 100%;
+  background: #f5f5f9; }
+  section .sec1 {
+    width: 95%;
+    padding-left: 0.8rem;
+    height: 5.1rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    background: #fff;
+    border-bottom: 0.1rem solid #e7e7e7; }
+    section .sec1 li {
+      -webkit-box-flex: 1;
+      text-align: center;
+      border-bottom: 0.1rem solid #e7e7e7;
+      margin-top: 0.9rem; }
+      section .sec1 li b {
+        background: url(../images/q6.png) no-repeat;
+        width: 1rem;
+        height: 1rem;
+        margin-top: 0.2rem;
+        margin-right: 0.4rem; }
+      section .sec1 li a {
+        font-size: 0.8rem;
+        color: #252525; }
+      section .sec1 li p {
+        font-size: 0.8rem;
+        color: #b4b4b4; }
+    section .sec1 .sli1 {
+      border-bottom: none; }
+      section .sec1 .sli1 b {
+        background: url(../images/q7.png) no-repeat; }
+  section .sec2 {
+    margin-top: 0.6rem;
+    width: 100%;
+    height: 2.4rem;
+    line-height: 2.4rem;
+    text-align: center;
+    background: #fff;
+    border-top: 0.1rem solid #e8e8e8;
+    border-bottom: 0.1rem solid #e8e8e8;
+    font-size: 0.9rem;
+    color: #df3031;
+    display: block; }

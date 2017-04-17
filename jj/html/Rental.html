@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0/no">
+    <meta content="telephone=no,email=no" name="format-detection"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/base.css"/>
+    <link rel="stylesheet" href="../css/common.css"/>
+    <link rel="stylesheet" href="../css/Rental.css"/>
+    <style>
+        [v-cloak]{
+            display:none
+        }
+        .nav-b1 {
+            width: 100%;
+            display: none;
+        }
+        .nav-b1 .nb {
+            background: #f2f2f2;
+            color: #fa0000;
+        }
+        .nav-b1 li {
+            width: 100%;
+            height: 1.95rem;
+            font-size: 0.6rem;
+            line-height: 1.95rem;
+            background: #fff;
+            border-bottom: 0.05rem solid #e7e7e7;
+        }
+        .nav-s li:nth-child(1) {
+            border-left: 1px solid #fff;
+        }
+        .nav-s li {
+            -webkit-box-flex: 1;
+            border-left: 1px solid #d8d8d8;
+            width: 100%;
+            text-align: center;
+            margin: 0.5rem 0;
+            padding: 0.15rem;
+        }
+        .nav-s li span {
+            max-width: 75%;
+            display: inline-block;
+            font-size: 0.6rem;
+            vertical-align: middle;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+    </style>
+</head>
+<body id="body">
+    <div class="header">
+        <header class="head">
+            <a href="../index.html">
+                <i></i>
+            </a>
+            <div class="head-s">
+                <span></span>
+                <input type="text" placeholder="请输入楼盘或地名搜索">
+            </div>
+        </header>
+        <nav  class="nav" id="nav" v-cloak>
+            <ul class="nav-s">
+                <li @click="add1" :class="[]">
+                    <span class="caret">区域</span>
+                </li>
+                <li @click="add2" :class="a2">
+                    <span class="caret">户型</span>
+                </li>
+                <li @click="add3" :class="a3">
+                    <span class="caret">价格</span>
+                </li>
+                <li @click="add4" :class="a4">
+                    <span class="caret">更多</span>
+                </li>
+            </ul>
+            <!--@@@@@@@@@@@@-->
+            <ol class="nav-b1" id="add1">
+                <li class="nb"><span>不限</span></li>
+                <li><span>福田</span></li>
+                <li><span>罗湖</span></li>
+                <li><span>南山</span></li>
+                <li><span>盐田</span></li>
+                <li><span>宝安</span></li>
+            </ol>
+            <ol class="nav-b1" id="add3">
+                <li class="nb"><span>不限</span></li>
+                <li><span>1000元以下</span></li>
+                <li><span>1000-2000元</span></li>
+                <li><span>2000-3000元</span></li>
+                <li><span>3000-5000元</span></li>
+                <li><span>5000-8000元</span></li>
+            </ol>
+            <ol class="nav-b1" id="add2">
+                <li class="nb"><span>不限</span></li>
+                <li><span>1室</span></li>
+                <li><span>2室</span></li>
+                <li><span>3室</span></li>
+                <li><span>4室</span></li>
+                <li><span>5室</span></li>
+            </ol>
+            <ol class="nav-b1" id="add4">
+                <li class="nb"><span>不限</span></li>
+                <li><span>50㎡以下</span></li>
+                <li><span>50-70㎡</span></li>
+                <li><span>70-90㎡</span></li>
+                <li><span>90-110㎡</span></li>
+                <li><span>110-130㎡</span></li>
+            </ol>
+        </nav >
+    </div>
+    <section >
+        <ul class="sec" v-cloak>
+            <li v-for="(i,v) in arr0" onclick="window.location.href='Rental_child.html'">
+                <div class="sec_L fl">
+                    <img :src="arr2[i]" alt="msg4"/>
+                </div>
+                <div class="sec_R fl">
+                    <p>{{v}}</p>
+                    <p>
+                        <span>{{arr3[i]}}</span>
+                    </p>
+                    <p>{{arr1[i]}}</p>
+                    <p class="clearfix sec_R_p4">
+                        <span>{{msg}}</span>
+                        <span>{{msg1}}</span>
+                        <span>{{msg3}}</span>
+                        <span>
+                            <i>{{arr[i]}}</i>
+                            <i>元/月</i>
+                        </span>
+                    </p>
+                </div>
+            </li>
+        </ul>
+        <div class="sec_s"></div>
+    </section>
+    <footer>
+        <span>上拉下载更多</span>
+    </footer>
+</body>
+</html>
+<script>
+    (function(){
+        function initFontSize(){
+            document.documentElement.style.fontSize=20*document.documentElement.clientWidth/375+'px';
+        }
+        initFontSize();
+        window.addEventListener('resize',initFontSize,false);
+    })();
+</script>
+<script src="../js/zepto.js"></script>
+<script src="../js/vue.js"></script>
+<script>
+    window.onload=function(){
+        var oLi1=$('#add1');
+        var oLi2=$('#add2');
+        var oLi3=$('#add3');
+        var oLi4=$('#add4');
+        var c=0;
+        var n=0;
+        var p=0;
+        var m=0;
+        var vm=new Vue({
+            el:'#body',
+            data:{
+                arr2:[
+                        '../images/Z_a.jpg',
+                        '../images/Z_c.jpg',
+                        '../images/Z_d.jpg',
+                        '../images/Z_e.jpg',
+                        '../images/Z_f.jpg',
+                        '../images/Z_g.jpg',
+                        '../images/Z_h.jpg',
+                        '../images/Z_i.jpg',
+                        '../images/Z_j.jpg',
+                        '../images/Z_k.jpg',
+                        '../images/Z_l.jpg'
+                ],
+                arr:['2500','4500','7800','3900','3600','3300','3800','4200','3400','4600','5100'],
+                arr0:['金地梅陇镇精装三房，家电齐全，业主诚租','璞岸花园','鹏大厦','远洋新天地家园','星河智荟花园','天涛轩','恒裕嘉城','花语馨花园','德润荣君府','益田米兰公馆','清凤荣盛创投大厦'],
+                arr1:['建筑面积109.58m² | 套内面积84.14㎡',
+                    '建筑面积89.98m² | 套内面积78㎡',
+                    '建筑面积124.00m² | 套内面积112㎡',
+                    '建筑面积130.00m² | 套内面积115㎡',
+                    '建筑面积41.00m² | 套内面积35㎡',
+                    '建筑面积100.95m² | 套内面积79.83㎡',
+                    '建筑面积134.00m² | 套内面积114㎡',
+                    '建筑面积96.34m² | 套内面积85㎡',
+                    '建筑面积149.44m² | 套内面积137.37㎡',
+                    '建筑面积47.12m² | 套内面积37㎡',
+                    '建筑面积34.00m² | 套内面积20㎡'
+                ],
+                arr3:[
+                        '金地梅陇镇三期 | 3房2厅 | 精装 | 南',
+                        '阳光第五季花园 | 3房2厅 | 精装 | 南北',
+                        '万科四季花城三期 | 3房2厅 | 精装 | 南北',
+                        '长城盛世家园二期 | 4房2厅 | 精装 | 北',
+                        '天健花园(福田) | 4房2厅 | 精装 | 南北',
+                        '凯旋豪庭 | 2房1厅 | 精装 | 南',
+                        '三湘海尚 | 3房2厅 | 精装 | 南北',
+                        '东方玫瑰花园 | 3房2厅 | 精装 | 南',
+                        '碧涛苑公寓 | 2房2厅 | 精装 | 南',
+                        '国泰豪园 | 3房2厅 | 精装 | 北',
+                        '布吉中心广场 | 2房1厅 | 普装 |东南'
+                ],
+
+
+                msg:'随时可看',
+                msg1:'拎包入住',
+                msg2:'有电梯',
+                msg3:'能上网',
+                msg4:'加载失败！'
+
+
+            },
+            methods:{
+                add1(){
+                    if(c%2==0){
+                        oLi2.hide();
+                        oLi3.hide();
+                        oLi4.hide();
+                        oLi1.show();
+                    }else{
+                        oLi1.hide();
+                    }
+                    c++;
+                },
+                add2(){
+                    if(n%2==0){
+                        oLi1.hide();
+                        oLi3.hide();
+                        oLi4.hide();
+                        oLi2.show();
+                    }else{
+                        oLi2.hide();
+
+                    }
+                    n++;
+                },
+                add3(){
+                    if(p%2==0){
+                        oLi1.hide();
+                        oLi2.hide();
+                        oLi4.hide();
+                        oLi3.show();
+                    }else{
+                        oLi3.hide();
+
+                    }
+                    p++;
+                },
+                add4(){
+                    if(m%2==0){
+                        oLi1.hide();
+                        oLi2.hide();
+                        oLi3.hide();
+                        oLi4.show();
+                    }else{
+                        oLi4.hide();
+                    }
+                    m++;
+                }
+            }
+
+        });
+    };
+</script>

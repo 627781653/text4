@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size: 20px;font-family:'Microsoft YaHei', '微软雅黑', Helvetica, '黑体', Arial, Tahoma;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0/no">
+    <meta content="telephone=no,email=no" name="format-detection"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/index-city.css">
+    <title>city</title>
+    <script>
+        (function(){
+            function initFontSize(){
+                document.documentElement.style.fontSize=20*document.documentElement.clientWidth/375+'px';
+            }
+            initFontSize();
+            window.addEventListener('resize',initFontSize,false);
+        })();
+    </script>
+</head>
+<body>
+    <header>
+        <a href="../index.html" ><i></i></a>
+        <span>选择城市</span>
+    </header>
+    <section>
+        <div>所有城市</div>
+        <ul>
+            <li><a href="#">深圳</a></li>
+            <li><a href="#">东莞</a></li>
+            <li><a href="#">惠州</a></li>
+            <li><a href="#">中山</a></li>
+            <li><a href="#">珠海</a></li>
+            <li><a href="#">江州</a></li>
+            <li><a href="#">佛山</a></li>
+        </ul>
+    </section>
+</body>
+</html>

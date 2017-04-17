@@ -1,0 +1,57 @@
+@import "base";
+@import "common";
+@function px2rem($px) {
+  @return $px / 20px * 1rem;
+}
+header{
+  position: relative;
+  height: px2rem(52px);
+  padding: px2rem(8px) 0;
+  background-color: #df3031;
+  text-align: center;
+  box-sizing: border-box;
+  a{
+    position: absolute;
+    top: px2rem(12px);
+    left: px2rem(8px);
+    i{
+      display: block;
+      width: px2rem(28px);
+      height: px2rem(28px);
+      background: url(../images/x-navback.png) no-repeat;
+      background-size: contain;
+    }
+  }
+  span{
+    display: block;
+    font-size: px2rem(20px);
+    color: #fff;
+    max-width: 65%;
+    line-height: px2rem(36px);
+    margin: 0 auto;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}
+section{
+  div{
+    color: #9b9b9b;
+    background: #f5f5f9;
+    font-size: px2rem(18px);
+    height: px2rem(52px);
+    line-height: px2rem(52px);
+    padding-left: px2rem(16px);
+    border-bottom: px2rem(1px) solid #e7e7e7;
+  }
+  ul{
+    padding-left: px2rem(16px);
+    background: #fff;
+    li{
+      height: px2rem(52px);
+      line-height: px2rem(52px);
+      font-size: px2rem(18px);
+      border-bottom: px2rem(1px) solid #e7e7e7;
+    }
+  }
+}

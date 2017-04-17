@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0/no">
+    <meta content="telephone=no,email=no" name="format-detection"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>Title</title>
+    <link href="../css/base.css" rel="stylesheet" />
+    <link href="../css/common.css" rel="stylesheet" />
+    <link href="../css/personal.css" rel="stylesheet" />
+    <script>
+        (function(){
+            function initFontSize(){
+                document.documentElement.style.fontSize=20*document.documentElement.clientWidth/375+'px';
+            }
+            initFontSize();
+            window.addEventListener('resize',initFontSize,false);
+        })();
+    </script>
+</head>
+<body>
+    <header class="re">
+       <img src="../images/q4.jpg" alt="" class="head"/>
+        <i class="ab"></i>
+        <p class="ab">177-7777-7777</p>
+    </header>
+    <section>
+        <ul class="sec1">
+            <li class="sli clearfix">
+                <b class="fl"></b>
+                <a href="MyCollections.html" class="fl">我的收藏</a>
+                <p class="fr">查看我收藏的房源 ></p>
+            </li>
+            <li class="sli1 clearfix">
+                <b class="fl"></b>
+                <a href="tSchedule.html" class="fl">交易进度</a>
+                <p class="fr">及时了解交易进度 ></p>
+            </li>
+        </ul>
+        <a href="load.html" class="sec2">退出登录</a>
+    </section>
+</body>
+</html>
